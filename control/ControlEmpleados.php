@@ -1,5 +1,7 @@
 <?php
 
+/*Actulizacion de datos*/
+
 class ControlEmpleados
 {
 	var $objEmpleados;
