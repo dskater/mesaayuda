@@ -87,8 +87,7 @@ class ControlEmpleados
 	
 			return $this->objEmpleados;
 		}
-
-
+		
 	}
 
 	function modificar()
