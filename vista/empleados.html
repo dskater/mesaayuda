@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="vistaEmpleados.php">
+        <table>
+            <tr>
+                <td>Id Empleado</td>
+                <td><input type="text" name="txtIdEmpleado" value=""></td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" name="txtNombre" value=""></td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td><input type="text" name="txtTelefono" value=""></td>
+            </tr>
+            <tr>
+                <td>FkIdArea</td>
+                <td><input type="text" name="txtFkIdArea" value=""></td>
+            </tr>
+
+
+        </table>
+        <table>
+            <tr>
+                <td><input type="submit" name ="btn" value = "guardar"></td>
+                <td><input type="submit" name ="btn" value = "consultar"></td>
+                <td><input type="submit" name ="btn" value = "modificar"></td>
+                <td><input type="submit" name ="btn" value = "borrar"></td>
+                <td><a href="areas.html">Ir a Areas</a></td>
+            </tr>
+        </table>
+
+    </form>
+    
+</body>
+</html>

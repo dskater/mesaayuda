@@ -45,7 +45,7 @@ class ControlAreas
 		{
 			$nombre = $registro["nombre"];
             $fkEmple = $registro["fkEmple"]
-			$this->objAreas->setNombreArea($nombre);
+			$this->objAreas->setNombre($nombre);
             $this->objAreas->setFkEmple($FkEmple);
 
 			$objControlConexion->cerrarBd();
