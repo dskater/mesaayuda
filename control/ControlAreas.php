@@ -17,7 +17,7 @@ class ControlAreas
 
 		$objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
-		$comandoSql = "insert into area values('".$idArea."','".$nombre."', '".$fkEmple."')";
+		$comandoSql = "insert into area values('".$idArea."','".$nombre."', ".$fkEmple.")";
 		$objControlConexion->ejecutarComandoSql($comandoSql);
 		$objControlConexion->cerrarBd();
 
@@ -43,10 +43,10 @@ class ControlAreas
 		
 		else
 		{
-			$nombre = $registro["nombre"];
-            $fkEmple = $registro["fkEmple"]
+			$nombre = $registro["NOMBRE"];
+            $fkEmple = $registro["FKEMPLE"];
 			$this->objAreas->setNombre($nombre);
-            $this->objAreas->setFkEmple($FkEmple);
+            $this->objAreas->setFkEmple($fkEmple);
 
 			$objControlConexion->cerrarBd();
 	
