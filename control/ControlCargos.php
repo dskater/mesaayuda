@@ -46,7 +46,6 @@ class ControlCargos
 			return $this->objCargos;
 		}
 
-
 	}
 
 	function modificar()

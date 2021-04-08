@@ -4,10 +4,19 @@
     include '../control/ControlEmpleados.php';
     include '../control/ControlConexion.php';
 
+
 	$idEmpleado = $_POST["txtIdEmpleado"];
 	$nombre = $_POST["txtNombre"];
 	$telefono = $_POST["txtTelefono"];
-    $fkIdArea = $_POST["txtFkIdArea"];
+	$fkArea = $_POST["txtFkIdArea"];
+    $foto = $_POST["txtFoto"];
+    $hojaVida = $_POST["txtHojaVida"];
+    $email= $_POST["txtEmail"];
+    $direccion= $_POST["txtDireccion"];
+    $x= $_POST["txtX"];
+    $y= $_POST["txtY"];
+    $fkEmple_Jefe= $_POST["txtFkEmple_Jefe"];
+
 
 
 	$bot = $_POST["btn"];

@@ -14,6 +14,7 @@
         var $fkEmple_Jefe;
         var $fkArea;
 
+
         function __construct($idEmpleado, $nombre, $foto, $hojaVida, $telefono, $email, $direccion, $x, $y, $fkEmple_Jefe, $fkArea)
         {
             $this->idEmpleado=$idEmpleado;
