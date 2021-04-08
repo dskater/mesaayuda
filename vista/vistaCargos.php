@@ -1,7 +1,7 @@
 <?php
     include '../modelo/Cargos.php';
     include '../control/ControlCargos.php';
-    include '..control/ControlConexion.php';
+    include '../control/ControlConexion.php';
 
     $idCargo =$_POST["txtIdCargo"];
     $nombre = $_POST["txtNombre"];
