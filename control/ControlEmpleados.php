@@ -70,7 +70,7 @@ class ControlEmpleados
 			$x = $registro["x"];
 			$y = $registro["y"];
 			$fkEmple_Jefe = $registro["fkEmple_Jefe"];
-            $fkArea = $registro["fkArea"]
+            $fkArea = $registro["fkArea"];
 
 			$this->objEmpleados->setNombre($nombre);
 			$this->objEmpleados->setFoto($foto);

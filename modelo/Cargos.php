@@ -1,8 +1,8 @@
 <?php
     class Cargos
     {
-        var idCargo;
-        var nombre;
+        var $idCargo;
+        var $nombre;
 
         function __construct($idCargo, $nombre)
         {

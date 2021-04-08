@@ -13,7 +13,6 @@ class ControlCargos
 	{
 		$idCargo=$this->objCargos->getIdCargo();
 		$nombre=$this->objCargos->getNombre();
-
 		$objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
 		$comandoSql = "insert into cargo values('".$idCargo."','".$nombre."')";
@@ -26,9 +25,7 @@ class ControlCargos
 	{
 		$idCargo=$this->objCargos->getIdCargo();
 		$nombre=$this->objCargos->getNombre();
-		
-
-		$objControlConexion = new ControlConexion();
+        $objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
 		$comandoSql = "select * from cargo where IDCARGO= '".$idCargo."'";
 		$rs = $objControlConexion->ejecutarSelect($comandoSql);

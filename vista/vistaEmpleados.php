@@ -18,42 +18,32 @@
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objControlEmpleados->guardar();
 		break;
-
 		case 'consultar':
 		$objEmpleados = new Empleados($idEmpleado,"","",0);
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objEmpleados = $objControlEmpleados->consultar();
-
-
 		if($objEmpleados==null)
 		{
 			echo "No hay registros";
 		}
-
 		else
 		{
 			$nombre=$objEmpleados->getNombre();
 			$telefono=$objEmpleados->getTelefono();
 			$fkIdArea=$objEmpleados->getFkIdArea();
-
 		}
-
 		break;
-
-
-
 		case 'modificar':
 		$objEmpleados = new Empleados($idEmpleado, $nombre, $telefono, $fkIdArea);
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objControlEmpleados->modificar();
 		break;
-
 		case 'borrar':
 		$objEmpleados = new Empleados($idEmpleado,"","",0);
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objControlEmpleados->borrar();
 		break;
-		
+
 		default:
 			# code...
 			break;
