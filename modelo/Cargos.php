@@ -1,5 +1,5 @@
 <?php
-    class Estado
+    class Cargos
     {
         var $idCargo;
         var $nombre;
@@ -30,4 +30,3 @@
             return $this->nombre;
         }
     }
-?>
