@@ -30,7 +30,4 @@
             return $this->nombre;
         }
     }
-
-
-
 ?>
