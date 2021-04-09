@@ -1,5 +1,5 @@
 <?php
-    class Cargos
+    class Estado
     {
         var $idCargo;
         var $nombre;

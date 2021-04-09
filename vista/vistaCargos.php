@@ -8,13 +8,13 @@
     $bot = $_POST["btn"];
 switch ($bot) {
     case 'guardar':
-        $objCargos = new Cargos($idCargo, $nombre);
+        $objCargos = new Estado($idCargo, $nombre);
         $objControlCargos = new ControlCargos($objCargos);
         $objControlCargos->guardar();
         break;
 
     case 'consultar':
-        $objCargos = new Cargos($idCargo,"");
+        $objCargos = new Estado($idCargo,"");
         $objControlCargos = new ControlCargos($objCargos);
         $objCargos = $objControlCargos->consultar();
 
@@ -30,13 +30,13 @@ switch ($bot) {
         break;
 
     case 'modificar':
-        $objCargos = new Cargos($idCargo,"");
+        $objCargos = new Estado($idCargo,"");
         $objControlCargos = new ControlCargos($objCargos);
         $objControlCargos->modificar();
         break;
 
     case 'borrar':
-        $objCargos = new Cargos($idCargo,"");
+        $objCargos = new Estado($idCargo,"");
         $objControlCargos = new ControlCargos($objCargos);
         $objControlCargos->borrar();
         break;
@@ -60,11 +60,11 @@ switch ($bot) {
 <body>
 <table>
     <tr>
-        <td>Identificacion del Area</td>
+        <td>Identificacion del Cargo</td>
         <td><input type="text" name="txtIdCargo" value="<?php echo "$idCargo" ?>"></td>
     </tr>
     <tr>
-        <td>Nombre del area</td>
+        <td>Nombre del Cargo</td>
         <td><input type="text" name="txtNombre" value="<?php echo "$nombre" ?>"></td>
     </tr>
     <tr>

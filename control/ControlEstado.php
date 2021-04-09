@@ -15,7 +15,7 @@ class ControlEstado
 		$nombre=$this->objEstados->getNombre();
 		$objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
-		$comandoSql = "insert into cargo values('".$idEstado."','".$nombre."')";
+		$comandoSql = "insert into estado values('".$idEstado."','".$nombre."')";
 		$objControlConexion->ejecutarComandoSql($comandoSql);
 		$objControlConexion->cerrarBd();
 
@@ -27,7 +27,7 @@ class ControlEstado
 		$nombre=$this->objEstados->getNombre();
         $objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
-		$comandoSql = "select * from cargo where IDCARGO= '".$idEstado."'";
+		$comandoSql = "select * from estado where IDESTADO= '".$idEstado."'";
 		$rs = $objControlConexion->ejecutarSelect($comandoSql);
 		$registro = $rs->fetch_array(MYSQLI_BOTH);//Asigna los datos a la variable $registro
 		
@@ -55,7 +55,7 @@ class ControlEstado
 
 		$objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
-		$comandoSql = "update cargo set NOMBRE = '".$nombre."' where IDCARGO = '".$idEstado."'";
+		$comandoSql = "update estado set NOMBRE = '".$nombre."' where IDESTADO = '".$idEstado."'";
 		$objControlConexion->ejecutarComandoSql($comandoSql);
 		$objControlConexion->cerrarBd();
 
@@ -68,7 +68,7 @@ class ControlEstado
 
 		$objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
-		$comandoSql = "delete from cargo where IDESTADO = '".$idEstado."'";
+		$comandoSql = "delete from estado where IDESTADO = '".$idEstado."'";
 		$objControlConexion->ejecutarComandoSql($comandoSql);
 		$objControlConexion->cerrarBd();
 
