@@ -23,12 +23,14 @@
 
 	switch ($bot) {
 		case 'guardar':
-		$objEmpleados = new Empleados($idEmpleado, $nombre, $telefono, $fkIdArea);
+		$objEmpleados = new Empleados($idEmpleado, $nombre, $foto, $hojaVida,$telefono,$email,$direccion,$x,$y,
+            $fkEmple_Jefe, $fkArea);
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objControlEmpleados->guardar();
 		break;
 		case 'consultar':
-		$objEmpleados = new Empleados($idEmpleado,"","",0);
+		$objEmpleados = new Empleados($idEmpleado, $nombre, $foto, $hojaVida,$telefono,$email,$direccion,$x,$y,
+            $fkEmple_Jefe, $fkArea);
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objEmpleados = $objControlEmpleados->consultar();
 		if($objEmpleados==null)
@@ -43,12 +45,14 @@
 		}
 		break;
 		case 'modificar':
-		$objEmpleados = new Empleados($idEmpleado, $nombre, $telefono, $fkIdArea);
+		$objEmpleados =  new Empleados($idEmpleado, $nombre, $foto, $hojaVida,$telefono,$email,$direccion,$x,$y,
+            $fkEmple_Jefe, $fkArea);
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objControlEmpleados->modificar();
 		break;
 		case 'borrar':
-		$objEmpleados = new Empleados($idEmpleado,"","",0);
+		$objEmpleados = new Empleados($idEmpleado,"","","","","","","",
+            "","","");
 		$objControlEmpleados = new ControlEmpleados($objEmpleados);
 		$objControlEmpleados->borrar();
 		break;
