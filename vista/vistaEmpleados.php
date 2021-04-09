@@ -74,24 +74,56 @@
 	<title>Document</title>
 </head>
 <body>
+
 <table>
-            <tr>
-                <td>Identificacion del Empleado</td>
-                <td><input type="text" name="txtIdEmpleado" value="<?php echo "$idEmpleado" ?>"></td>
-            </tr>
-            <tr>
-                <td>Nombre</td>
-                <td><input type="text" name="txtNombre" value="<?php echo "$nombre" ?>"></td>
-            </tr>
-			<tr>
-                <td>Telefono</td>
-                <td><input type="text" name="txtTelefono" value="<?php echo "$telefono" ?>"></td>
-            </tr>
-			<tr>
-                <td>FkIdArea</td>
-                <td><input type="text" name="txtFkIdArea" value="<?php echo "$fkIdArea" ?>">Accion Exitosa <br><a href="empleados.html">Volver a Empleados</a></td>
-            </tr>
-        </table>
-        <table>
+    <tr>
+        <td>Id Empleado</td>
+        <td><input type="text" name="txtIdEmpleado" value="<?php echo "$idEmpleado"?>"></td>
+    </tr>
+    <tr>
+        <td>Nombre</td>
+        <td><input type="text" name="txtNombre" value="<?php echo "$nombre" ?>"></td>
+    </tr>
+    <tr>
+        <td>Foto</td>
+        <td><input type="text" name="txtFoto" value="<?php echo "$foto" ?>"></td>
+    </tr>
+    <tr>
+
+        <td>Teléfono</td>
+        <td><input type="text" name="txtTelefono" value="<?php echo "$telefono" ?>"></td>
+    </tr>
+    <tr>
+        <td>Hoja de vida</td>
+        <td><input type="text" name="txtHojaVida" value="<?php echo "$hojaVida" ?>"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="email" name="txtEmail" value="<?php echo "$email" ?>"></td>
+    </tr>
+    <tr>
+        <td>Direccion</td>
+        <td><input type="text" name="txtDireccion" value="<?php echo "$direccion" ?>"></td>
+    </tr>
+    <tr>
+        <td>Longitud</td>
+        <td><input type="text" name="txtX" value="<?php echo "$x" ?>"></td>
+    </tr>
+    <tr>
+        <td>Latitud</td>
+        <td><input type="text" name="txtY" value="<?php echo "$y" ?>"></td>
+    </tr>
+
+    <tr>
+        <td>id Empleado Jefe</td>
+        <td><input type="number" name="txtFkEmple_Jefe" value="<?php echo "$fkEmple_Jefe" ?>"></td>
+    </tr>
+    <tr>
+        <td>id Area</td>
+        <td><input type="number" name="txtFkIdArea" value="<?php echo "$fkArea" ?>"></td>
+        Accion Exitosa <br><a href="empleados.html">Volver a Empleados</a></td>
+    </tr>
+
+</table>
 </body>
 </html>
