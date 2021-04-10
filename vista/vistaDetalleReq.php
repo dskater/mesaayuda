@@ -26,7 +26,7 @@ $idDetalle = $_POST["txtIdDetalle"];
 		break;
 
 		case 'consultar':
-		$objDetalleReq = new Requerimientos($idDetalle,"","","","","","");
+		$objDetalleReq = new DetalleReq($idDetalle,"","","","","","");
 		$objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
 		$objDetalleReq = $objControlDetalleReq->consultar();
 		
@@ -42,13 +42,13 @@ $idDetalle = $_POST["txtIdDetalle"];
 		break;
 
 		case 'modificar':
-		$objDetalleReq = new Requerimientos($idRequerimiento, $fkArea);
+		$objDetalleReq = new DetalleReq($idDetalle,"","","","","","");
 		$objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
 		$objControlDetalleReq->modificar();
 		break;
 
 		case 'borrar':
-		$objDetalleReq = new Requerimientos($idRequerimiento,"","","","","","");
+		$objDetalleReq = new DetalleReq($idDetalle,"","","","","","");
 		$objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
 		$objControlDetalleReq->borrar();
 		break;
