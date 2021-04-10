@@ -76,32 +76,32 @@ $idDetalle = $_POST["txtIdDetalle"];
 <table>
             <tr>
                 <td>Id Detalle del Requerimiento</td>
-                <td><input type="text" name="txtIdDetalle" value=""></td>
+                <td><input type="text" name="txtIdDetalle" value="<?php echo "$idDetalle" ?>"></td>
             </tr>
             <tr>
                 <td>Fecha</td>
-                <td><input type="text" name="txtFecha" value=""></td>
+                <td><input type="text" name="txtFecha" value="<?php echo "$fecha" ?>"></td>
             </tr>
             <tr>
                 <td>Observacion</td>
-                <td><input type="text" name="txtObservacion" value=""></td>
+                <td><input type="text" name="txtObservacion" value="<?php echo "$observacion" ?>"></td>
             </tr>
             <tr>
 
                 <td>Id del Requerimiento</td>
-                <td><input type="text" name="txtFkReq" value=""></td>
+                <td><input type="text" name="txtFkReq" value="<?php echo "$fkReq" ?>"></td>
             </tr>
             <tr>
                 <td>Id Estado</td>
-                <td><input type="text" name="txtFkEstado" value=""></td>
+                <td><input type="text" name="txtFkEstado" value="<?php echo "$fkEstado" ?>"></td>
             </tr>
             <tr>
                 <td>Id del Empleado</td>
-                <td><input type="email" name="txtFkEmple" value=""></td>
+                <td><input type="email" name="txtFkEmple" value="<?php echo "$fkEmple" ?>"></td>
             </tr>
             <tr>
                 <td>Id Empleado Asignado</td>
-                <td><input type="text" name="txtFkEmpleAsignado" value="">Accion Exitosa <br><a href="requerimientos.html">Volver a Requerimientos</a></td>
+                <td><input type="text" name="txtFkEmpleAsignado" value="<?php echo "$fkEmpleAsignado" ?>">Accion Exitosa <br><a href="requerimientos.html">Volver a Requerimientos</a></td>
             </tr>
             
         </table>
