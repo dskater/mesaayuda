@@ -2,12 +2,13 @@
 
     class Requerimientos
     {
-        var idReq;
-        var fkArea;
+        var $idReq;
+        var $fkArea;
 
         function __construct($idReq, $fkArea)
         {
             $this->idReq=$;
+            $this->fkArea;
         }
     }
 
