@@ -128,7 +128,7 @@ class ControlEmpleados
 
 		$objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
-		$comandoSql = "delete from emplado where IDEMPLEADO = '".$idEmpleado."'";
+		$comandoSql = "delete from empleado where IDEMPLEADO = '".$idEmpleado."'";
 		$objControlConexion->ejecutarComandoSql($comandoSql);
 		$objControlConexion->cerrarBd();
 

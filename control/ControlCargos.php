@@ -25,6 +25,8 @@ class ControlCargos
 	{
 		$idCargo=$this->objCargos->getIdCargo();
 		$nombre=$this->objCargos->getNombre();
+
+
         $objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
 		$comandoSql = "select * from cargo where IDCARGO= '".$idCargo."'";
@@ -38,7 +40,7 @@ class ControlCargos
 		
 		else
 		{
-			$nombre = $registro["nombre"];
+			$nombre = $registro["NOMBRE"];
 			$this->objCargos->setNombre($nombre);
 
 			$objControlConexion->cerrarBd();
@@ -50,7 +52,7 @@ class ControlCargos
 
 	function modificar()
 	{
-		$idCargo=$this->objCargos->getidCargo();
+		$idCargo=$this->objCargos->getIdCargo();
 		$nombre=$this->objCargos->getNombre();
 
 		$objControlConexion = new ControlConexion();

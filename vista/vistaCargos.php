@@ -65,7 +65,7 @@ switch ($bot) {
     </tr>
     <tr>
         <td>Nombre del Cargo</td>
-        <td><input type="text" name="txtNombre" value="<?php echo "$nombre" ?>"></td>
+        <td><input type="text" name="txtNombre" value="<?php echo "$nombre" ?>">Accion Exitosa <br><a href="cargos.html">Volver a Cargos</a></td>
     </tr>
     <tr>
 
