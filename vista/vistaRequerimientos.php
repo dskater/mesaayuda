@@ -8,6 +8,17 @@
 
 	$idRequerimiento = $_POST["txtIdRequerimiento"];
 	$fkArea = $_POST["txtFkArea"];
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///DETALLLLEEEEEEEE
+
+
+    $idDetalle = $_POST["txtIdDetalle"];
+    $fecha = $_POST["txtFecha"];
+    $observacion = $_POST["txtObservacion"];
+    $fkReq = $_POST["txtFkReq"];
+    $fkEstado = $_POST["txtFkEstado"];
+    $fkEmple = $_POST["txtFkEmple"];
+    $fkEmpleAsignado = $_POST["txtFkEmpleAsignado"];
 
 	$bot = $_POST["btn"];
 
@@ -15,7 +26,14 @@
 		case 'guardar':
 		$objRequerimientos = new Requerimientos($idRequerimiento, $fkArea);
 		$objControlRequerimientos = new ControlRequerimientos($objRequerimientos);
-		$objControlRequerimientos->guardar();
+        $objControlRequerimientos->guardar();
+        ////////////////////////////////////////////////////////////////////
+ ///////////////////////////////DETALLLEEE
+
+        $objDetalleReq = new DetalleReq($idDetalle, $fecha, $observacion, $fkReq, $fkEstado, $fkEmple, $fkEmpleAsignado);
+        $objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
+        $objControlDetalleReq->guardar();
+		
 		break;
 
 		case 'consultar':

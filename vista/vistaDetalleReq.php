@@ -7,7 +7,7 @@ include '../control/ControlConexion.php';
 include '../control/ControlDetalleReq.php';
 
 
-$idDetalle = $_POST["txtIdDetalle"];
+    $idDetalle = $_POST["txtIdDetalle"];
 	$fecha = $_POST["txtFecha"];
     $observacion = $_POST["txtObservacion"];
     $fkReq = $_POST["txtFkReq"];
@@ -16,9 +16,9 @@ $idDetalle = $_POST["txtIdDetalle"];
     $fkEmpleAsignado = $_POST["txtFkEmpleAsignado"];
 	
 
-    $bot2 = $_POST["btn"];
+    $bot = $_POST["btn"];
 
-	switch ($bot2) {
+	switch ($bot) {
 		case 'guardar':
 		$objDetalleReq = new DetalleReq($idDetalle, $fecha, $observacion, $fkReq, $fkEstado, $fkEmple, $fkEmpleAsignado);
 		$objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
@@ -26,7 +26,7 @@ $idDetalle = $_POST["txtIdDetalle"];
 		break;
 
 		case 'consultar':
-		$objDetalleReq = new DetalleReq($idDetalle, $fecha, $observacion, $fkReq, $fkEstado, $fkEmple, $fkEmpleAsignado);
+		$objDetalleReq = new DetalleReq($idDetalle,"","","","","","");
 		$objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
 		$objDetalleReq = $objControlDetalleReq->consultar();
 		
@@ -35,7 +35,7 @@ $idDetalle = $_POST["txtIdDetalle"];
 			echo "No hay registros";
 		}
 		else
-		{}
+        {
             $fecha=$objDetalleReq->getFecha();
 			$observacion=$objDetalleReq->getObservacion();
 			$fkReq=$objDetalleReq->getFkReq();
@@ -76,32 +76,32 @@ $idDetalle = $_POST["txtIdDetalle"];
 <table>
             <tr>
                 <td>Id Detalle del Requerimiento</td>
-                <td><input type="text" name="txtIdDetalle" value=""></td>
+                <td><input type="text" name="txtIdDetalle" value="<?php echo "$idDetalle" ?>"></td>
             </tr>
             <tr>
                 <td>Fecha</td>
-                <td><input type="text" name="txtFecha" value=""></td>
+                <td><input type="text" name="txtFecha" value="<?php echo "$fecha" ?>"></td>
             </tr>
             <tr>
                 <td>Observacion</td>
-                <td><input type="text" name="txtObservacion" value=""></td>
+                <td><input type="text" name="txtObservacion" value="<?php echo "$observacion" ?>"></td>
             </tr>
             <tr>
 
                 <td>Id del Requerimiento</td>
-                <td><input type="text" name="txtFkReq" value=""></td>
+                <td><input type="text" name="txtFkReq" value="<?php echo "$fkReq" ?>"></td>
             </tr>
             <tr>
                 <td>Id Estado</td>
-                <td><input type="text" name="txtFkEstado" value=""></td>
+                <td><input type="text" name="txtFkEstado" value="<?php echo "$fkEstado" ?>"></td>
             </tr>
             <tr>
                 <td>Id del Empleado</td>
-                <td><input type="email" name="txtFkEmple" value=""></td>
+                <td><input type="email" name="txtFkEmple" value="<?php echo "$fkEmple" ?>"></td>
             </tr>
             <tr>
                 <td>Id Empleado Asignado</td>
-                <td><input type="text" name="txtFkEmpleAsignado" value="">Accion Exitosa <br><a href="requerimientos.html">Volver a Requerimientos</a></td>
+                <td><input type="text" name="txtFkEmpleAsignado" value="<?php echo "$fkEmpleAsignado" ?>">Accion Exitosa <br><a href="requerimientos.html">Volver a Requerimientos</a></td>
             </tr>
             
         </table>

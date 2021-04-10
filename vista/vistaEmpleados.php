@@ -40,8 +40,17 @@
 		else
 		{
 			$nombre=$objEmpleados->getNombre();
-			$telefono=$objEmpleados->getTelefono();
-			$fkIdArea=$objEmpleados->getFkIdArea();
+			$foto=$objEmpleados->getFoto();
+			$hojaVida=$objEmpleados->getHojaVida();
+            $telefono=$objEmpleados->getTelefono();
+            $email=$objEmpleados->getEmail();
+            $direccion=$objEmpleados->getDireccion();
+            $x=$objEmpleados->getX();
+            $y=$objEmpleados->getY();
+            $fkEmple_Jefe=$objEmpleados->getFkEmple_Jefe();
+            $fkArea=$objEmpleados->getFkArea();
+
+
 		}
 		break;
 		case 'modificar':
@@ -119,9 +128,9 @@
         <td><input type="number" name="txtFkEmple_Jefe" value="<?php echo "$fkEmple_Jefe" ?>"></td>
     </tr>
     <tr>
+
         <td>id Area</td>
-        <td><input type="number" name="txtFkIdArea" value="<?php echo "$fkArea" ?>"></td>
-        Accion Exitosa <br><a href="empleados.html">Volver a Empleados</a></td>
+        <td><input type="number" name="txtFkIdArea" value="<?php echo "$fkArea" ?>">Accion Exitosa <br><a href="empleados.html">Volver a Empleados</a></td>
     </tr>
 
 </table>
