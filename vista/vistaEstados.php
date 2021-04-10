@@ -8,13 +8,13 @@
     $bot = $_POST["btn"];
 switch ($bot) {
     case 'guardar':
-        $objEstados = new Cargos($idEstado, $nombre);
+        $objEstados = new Estado($idEstado, $nombre);
         $objControlEstados = new ControlEstado($objEstados);
         $objControlEstados->guardar();
         break;
 
     case 'consultar':
-        $objEstados = new Cargos($idEstado,"");
+        $objEstados = new Estado($idEstado,"");
         $objControlEstados = new ControlEstado($objEstados);
         $objEstados = $objControlEstados->consultar();
 
@@ -30,13 +30,13 @@ switch ($bot) {
         break;
 
     case 'modificar':
-        $objEstados = new Cargos($idEstado,"");
+        $objEstados = new Estado($idEstado,"");
         $objControlEstados = new ControlEstado($objEstados);
         $objControlEstados->modificar();
         break;
 
     case 'borrar':
-        $objEstados = new Cargos($idEstado,"");
+        $objEstados = new Estado($idEstado,"");
         $objControlEstados = new ControlEstado($objEstados);
         $objControlEstados->borrar();
         break;
