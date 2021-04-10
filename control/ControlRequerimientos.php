@@ -41,13 +41,13 @@ class ControlRequerimientos
 		
 		else
 		{
-			$nombre = $registro["FKAREA"];
+			$fkArea = $registro["FKAREA"];
 
-			$this->objAreas->setNombre($fkArea);
+			$this->objRequerimientos->setFkArea($fkArea);
 
 			$objControlConexion->cerrarBd();
 	
-			return $this->objAreas;
+			return $this->objRequerimientos;
 		}
 
 

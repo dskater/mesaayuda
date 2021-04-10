@@ -7,8 +7,8 @@
 
         function __construct($idReq, $fkArea)
         {
-            $this->idReq=$;
-            $this->fkArea;
+            $this->idReq=$idReq;
+            $this->fkArea=$fkArea;
         }
 
         function setIdReq($idReq)
