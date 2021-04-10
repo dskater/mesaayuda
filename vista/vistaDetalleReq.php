@@ -105,7 +105,8 @@ include '../control/ControlDetalleReq.php';
             </tr>
             
         </table>
-    
+
+
 </body>
 </html>
 

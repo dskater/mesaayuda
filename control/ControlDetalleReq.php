@@ -38,7 +38,6 @@ class ControlDetalleReq
 		$fkEstado=$this->objDetalleReq->getFkEstado();
         $fkEmple=$this->objDetalleReq->getFkEmple();
         $fkEmpleAsignado=$this->objDetalleReq->getFkEmpleAsignado();
-		
 
 		$objControlConexion = new ControlConexion();
 		$objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
@@ -110,6 +109,49 @@ class ControlDetalleReq
 		$objControlConexion->cerrarBd();
 
 	}
+    function consultarporidreq()
+    {
+        $idDetalle=$this->objDetalleReq->getIdDetalle();
+        $fecha=$this->objDetalleReq->getFecha();
+        $observacion=$this->objDetalleReq->getObservacion();
+        $fkReq=$this->objDetalleReq->getFkReq();
+        $fkEstado=$this->objDetalleReq->getFkEstado();
+        $fkEmple=$this->objDetalleReq->getFkEmple();
+        $fkEmpleAsignado=$this->objDetalleReq->getFkEmpleAsignado();
+
+        $objControlConexion = new ControlConexion();
+        $objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
+        $comandoSql = "select * from detallereq where FKREQ= '".$fkReq."'";
+        $rs = $objControlConexion->ejecutarSelect($comandoSql);
+        $registro = $rs->fetch_array(MYSQLI_BOTH);//Asigna los datos a la variable $registro
+
+        if(is_null($registro))
+        {
+            return null;
+        }
+
+        else
+        {
+            $fecha = $registro["FECHA"];
+            $observacion = $registro["OBSERVACION"];
+            $fkReq = $registro["FKREQ"];
+            $fkEstado = $registro["FKESTADO"];
+            $fkEmple = $registro["FKEMPLE"];
+            $fkEmpleAsignado = $registro["FKEMPLEASIGNADO"];
+
+            $this->objDetalleReq->setFecha($fecha);
+            $this->objDetalleReq->setObservacion($observacion);
+            $this->objDetalleReq->setFkReq($fkReq);
+            $this->objDetalleReq->setFkEstado($fkEstado);
+            $this->objDetalleReq->setFkEmple($fkEmple);
+            $this->objDetalleReq->setFkEmpleAsignado($fkEmpleAsignado);
+
+            $objControlConexion->cerrarBd();
+
+            return $this->objDetalleReq;
+        }
+
+    }
 }
 	
 ?>
