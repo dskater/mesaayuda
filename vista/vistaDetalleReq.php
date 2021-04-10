@@ -35,7 +35,7 @@ $idDetalle = $_POST["txtIdDetalle"];
 			echo "No hay registros";
 		}
 		else
-		{}
+		{
             $fecha=$objDetalleReq->getFecha();
 			$observacion=$objDetalleReq->getObservacion();
 			$fkReq=$objDetalleReq->getFkReq();
