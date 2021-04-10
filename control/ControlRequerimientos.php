@@ -78,6 +78,24 @@ class ControlRequerimientos
 		$objControlConexion->cerrarBd();
 
 	}
+
+
+    function consultarUltimoId(){
+        $objControlConexion = new ControlConexion();
+        $objControlConexion->abrirBd("localhost","root","","mesa_ayuda");
+        $comandoSql = "SELECT MAX(IDREQ) AS id FROM requerimiento";
+        $rs = $objControlConexion->ejecutarSelect($comandoSql);
+        $registro = $rs->fetch_array(MYSQLI_BOTH);//Asigna los datos a la variable $registro
+
+        if(is_null($registro))
+        {
+            return null;
+        }
+        else{
+            return $registro["id"];
+        }
+
+    }
 }
 	
 ?>

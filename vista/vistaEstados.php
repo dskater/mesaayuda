@@ -30,7 +30,7 @@ switch ($bot) {
         break;
 
     case 'modificar':
-        $objEstados = new Estado($idEstado,"");
+        $objEstados = new Estado($idEstado,$nombre);
         $objControlEstados = new ControlEstado($objEstados);
         $objControlEstados->modificar();
         break;

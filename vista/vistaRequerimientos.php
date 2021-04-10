@@ -10,8 +10,6 @@
 	$fkArea = $_POST["txtFkArea"];
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///DETALLLLEEEEEEEE
-
-
     $idDetalle = $_POST["txtIdDetalle"];
     $fecha = $_POST["txtFecha"];
     $observacion = $_POST["txtObservacion"];
@@ -27,10 +25,11 @@
 		$objRequerimientos = new Requerimientos($idRequerimiento, $fkArea);
 		$objControlRequerimientos = new ControlRequerimientos($objRequerimientos);
         $objControlRequerimientos->guardar();
+        $id = $objControlRequerimientos->consultarUltimoId(); //obtiene el id que se guardó
+
         ////////////////////////////////////////////////////////////////////
  ///////////////////////////////DETALLLEEE
-
-        $objDetalleReq = new DetalleReq($idDetalle, $fecha, $observacion, $fkReq, $fkEstado, $fkEmple, $fkEmpleAsignado);
+        $objDetalleReq = new DetalleReq($idDetalle, $fecha, $observacion, $id, $fkEstado, $fkEmple, $fkEmpleAsignado);
         $objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
         $objControlDetalleReq->guardar();
 		
