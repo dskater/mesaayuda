@@ -26,7 +26,7 @@ $idDetalle = $_POST["txtIdDetalle"];
 		break;
 
 		case 'consultar':
-		$objDetalleReq = new DetalleReq($idDetalle,"","","","","","");
+		$objDetalleReq = new DetalleReq($idDetalle, $fecha, $observacion, $fkReq, $fkEstado, $fkEmple, $fkEmpleAsignado);
 		$objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
 		$objDetalleReq = $objControlDetalleReq->consultar();
 		
@@ -35,14 +35,19 @@ $idDetalle = $_POST["txtIdDetalle"];
 			echo "No hay registros";
 		}
 		else
-		{
-			$fkArea=$objDetalleReq->getFkArea();
+		{}
+            $fecha=$objDetalleReq->getFecha();
+			$observacion=$objDetalleReq->getObservacion();
+			$fkReq=$objDetalleReq->getFkReq();
+            $fkEstado=$objDetalleReq->getFkEstado();
+			$fkEmple=$objDetalleReq->getFkEmple();
+			$fkEmpleAsignado=$objDetalleReq->getFkEmpleAsignado();
 		}
 		
 		break;
 
 		case 'modificar':
-		$objDetalleReq = new DetalleReq($idDetalle,"","","","","","");
+		$objDetalleReq = new DetalleReq($idDetalle, $fecha, $observacion, $fkReq, $fkEstado, $fkEmple, $fkEmpleAsignado);
 		$objControlDetalleReq = new ControlDetalleReq($objDetalleReq);
 		$objControlDetalleReq->modificar();
 		break;
