@@ -61,16 +61,16 @@ class ControlEmpleados
 		
 		else
 		{
-			$nombre = $registro["nombre"];
-			$foto = $registro["foto"];
-			$hojaVida = $registro["hojaVida"];
-			$telefono = $registro["telefono"];
-			$email = $registro["email"];
-			$direccion = $registro["direccion"];
-			$x = $registro["x"];
-			$y = $registro["y"];
-			$fkEmple_Jefe = $registro["fkEmple_Jefe"];
-            $fkArea = $registro["fkArea"];
+			$nombre = $registro["NOMBRE"];
+			$foto = $registro["FOTO"];
+			$hojaVida = $registro["HOJAVIDA"];
+			$telefono = $registro["TELEFONO"];
+			$email = $registro["EMAIL"];
+			$direccion = $registro["DIRECCION"];
+			$x = $registro["X"];
+			$y = $registro["Y"];
+			$fkEmple_Jefe = $registro["fkEMPLE_JEFE"];
+            $fkArea = $registro["fkAREA"];
 
 			$this->objEmpleados->setNombre($nombre);
 			$this->objEmpleados->setFoto($foto);
