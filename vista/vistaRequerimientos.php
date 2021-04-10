@@ -74,7 +74,7 @@
                 <td><input type="text" name="txtFkArea" value="<?php echo "$fkArea" ?>">Accion Exitosa <br><a href="requerimientos.html">Volver a Requerimientos</a></td>
             </tr>
             <td>
-                <a href="vistaDetalleReq.html">Ir al Detalle del Requerimiento</a>
+                <a href="detalleReq.html">Ir al Detalle del Requerimiento</a>
             </td>
         </table>
         <table>
